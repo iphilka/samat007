@@ -5,6 +5,9 @@ console.log(vkLogin);
 
 let user;
 
+let testFunction = function(){
+  vkLogin.textContent = "Привет, " + user.first_name + " " + user.last_name;
+};
 vkLogin.addEventListener('click', function () {
  
     // Авторизация
@@ -18,8 +21,6 @@ vkLogin.addEventListener('click', function () {
  
           user = response.session.user; //  информация о пользователе
 
-          debugger;
-          vkLogin.textContent = "Привет" + user.first_name + " " + user.last_name;
             /*
              user.first_name - имя;
              user.last_name - фамилия;
@@ -29,9 +30,7 @@ vkLogin.addEventListener('click', function () {
              */
  
         } else if (response.status === 'not_authorized') { // пользователь авторизован в ВКонтакте, но не разрешил доступ приложению;
- 
         } else if (response.status === 'unknown') { // пользователь не авторизован ВКонтакте.
- 
         }
  
       },
@@ -48,7 +47,7 @@ vkLogin.addEventListener('click', function () {
     );
     //   console.log(user.first_name);
     //   console.log(user.last_name);
-      alert("Hello " + user.first_name + " " + user.last_name);
+    testFunction();
   });
 
  
