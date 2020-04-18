@@ -43,11 +43,9 @@ vkLogin.addEventListener('click', function () {
       // WIKI:128
       VK.access.PHOTOS
     );
-      console.log(user.first_name);
-      console.log(user.last_name);
-      alert("Hello " + user.first_name + " " + user.last_name);
+    //   console.log(user.first_name);
+    //   console.log(user.last_name);
+    //   alert("Hello " + user.first_name + " " + user.last_name);
   });
 
-  if (user.id == '123124235235235'){
-      button
-  }
+ 
