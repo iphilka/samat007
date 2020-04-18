@@ -47,7 +47,7 @@ vkLogin.addEventListener('click', function (evt) {
     );
     //   console.log(user.first_name);
     //   console.log(user.last_name);
-    testFunction();
+    setTimeout(testFunction, 2000);
   });
 
  
