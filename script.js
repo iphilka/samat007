@@ -3,7 +3,7 @@
 let vkLogin = document.querySelector("#vkLogin");
 console.log(vkLogin);
 
-
+let user;
 
 vkLogin.addEventListener('click', function () {
  
@@ -16,7 +16,7 @@ vkLogin.addEventListener('click', function () {
  
         if (response.status === 'connected') { // авторизация прошла успешно
  
-          var user = response.session.user; //  информация о пользователе
+          user = response.session.user; //  информация о пользователе
             /*
              user.first_name - имя;
              user.last_name - фамилия;
@@ -43,5 +43,9 @@ vkLogin.addEventListener('click', function () {
       // WIKI:128
       VK.access.PHOTOS
     );
- 
+      console.log(user.first_name);
+      console.log(user.last_name);
+      alert("Hello" + user.first_name + " " + user.last_name);
   });
+
+  
