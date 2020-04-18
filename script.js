@@ -17,6 +17,9 @@ vkLogin.addEventListener('click', function () {
         if (response.status === 'connected') { // авторизация прошла успешно
  
           user = response.session.user; //  информация о пользователе
+
+
+          vkLogin.textContent = "Привет" + user.first_name + " " + user.last_name;
             /*
              user.first_name - имя;
              user.last_name - фамилия;
