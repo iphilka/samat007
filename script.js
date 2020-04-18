@@ -4,9 +4,6 @@ let vkLogin = document.querySelector("#vkLogin");
 console.log(vkLogin);
 
 
-VK.init({
-    apiId: 7417722
-  });
 
 vkLogin.addEventListener('click', function () {
  
