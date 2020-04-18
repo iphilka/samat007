@@ -7,10 +7,26 @@
     <title>GameStore</title>
 </head>
 <body>
-    <button>Войти</button>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Каталог игр</a></li>
+                <li><a href="#">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+    <button id="vkLogin">Войти</button>
     <div id="vk_auth"></div>
     <script type="text/javascript">
-        VK.Widgets.Auth("vk_auth", {"authUrl":"/dev/Login"});
+        VK.Widgets.Auth("vk_auth", {"width":300,"authUrl":"/dev/Login"});
     </script>
     <script src="script.js"></script>
 </body>
