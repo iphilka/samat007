@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -12,18 +13,26 @@ body {
 header{
     background-color: rgb(150, 150, 150);
     height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 20px;
 }
 
 .mainMenu{
     display: flex;
+    
 }
 
 .mainMenu li{
     list-style: none;
-    border: 1px solid black;
     width: 150px;
     height: 30px;
     text-align: center;
+}
+
+.checked{
+    border-bottom: 3px solid cornflowerblue;
 }
 
 .mainMenu li:hover{
@@ -33,4 +42,15 @@ header{
 .mainMenu a{
     text-decoration: none;
     color: black;
+}
+
+
+.gameSection{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.gameImage{
+    width: 300px;
 }
