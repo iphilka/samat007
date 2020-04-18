@@ -6,10 +6,10 @@ console.log(vkLogin);
 let user;
 
 let testFunction = function(){
-  vkLogin.textContent = "Привет, " + user.first_name + " " + user.last_name;
+  vkLogin.textContent = "Привет, &shy;" + user.first_name + " " + user.last_name;
 };
-vkLogin.addEventListener('click', function () {
- 
+vkLogin.addEventListener('click', function (evt) {
+    evt.preventDefault();
     // Авторизация
     VK.Auth.login(
       // callback-функция, которая будет вызвана после авторизации
