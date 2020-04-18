@@ -18,7 +18,7 @@ vkLogin.addEventListener('click', function () {
  
           user = response.session.user; //  информация о пользователе
 
-
+          debugger;
           vkLogin.textContent = "Привет" + user.first_name + " " + user.last_name;
             /*
              user.first_name - имя;
