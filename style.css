@@ -11,45 +11,65 @@ body {
 }
 
 header{
-    background-color: rgb(150, 150, 150);
+    background-color: rgb(31, 28, 28);
     height: 100px;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 30px;
+    padding-top:0;
     font-size: 20px;
 }
 
 .mainMenu{
-    display: flex;
-    
+    display: flex;  
 }
 
 .mainMenu li{
     list-style: none;
-    width: 150px;
+    width: 250px;
     height: 30px;
     text-align: center;
+    padding-top: 30px;
+    padding-bottom: 63px;
 }
 
-.checked{
-    border-bottom: 3px solid cornflowerblue;
+.checked{        
+    border-bottom: 7px solid rgb(37, 210, 37);
 }
 
 .mainMenu li:hover{
-    background-color: cadetblue;
+    background-color: rgb(37, 210, 37);
+    border-bottom: 7px solid rgb(37, 210, 37);
 }
 
 .mainMenu a{
     text-decoration: none;
-    color: black;
+    color: white;
+    font-size: 30px;
 }
+
 
 
 .gameSection{
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
 }
 
+.button{
+    display: block;
+    padding: 15px 0;
+    font-size: 30px;
+    background-color: rgb(37, 210, 37);
+    text-decoration: none;
+    color: black;
+    width: 70%;
+    text-align: center;
+}
+
+.gameItem{
+    margin-right: 20px;
+}
 
 .gameImage{
     width: 300px;
