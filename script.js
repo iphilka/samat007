@@ -30,12 +30,10 @@ let pageUpgrade = function () {
         buyButtons[i].href = "download.html";
         buyButtons[i].textContent = "Скачать";
         continue outer;
-        debugger;
       }
       else{
         buyButtons[i].style.background = "rgb(37, 210, 37)";
         buyButtons[i].href = "link.html";
-        debugger;
       }
       
     }
