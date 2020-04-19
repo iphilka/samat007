@@ -18,24 +18,26 @@ let AutorizationFunction = function(){
 };
 
 let pageUpgrade = function () {
-  for (let i = 0; i < buyButtons.length; i++) {
+  outer: for (let i = 0; i < buyButtons.length; i++) {
     
     //Проверить куплена ли игра 
-    let parentButton = buyButtons[0].parentNode.querySelector(".gameTitle").textContent;
+    let parentButton = buyButtons[i].parentNode.querySelector(".gameTitle").textContent;
 
     for (let j = 0; j < games.length; j++) {
-      debugger;
+      
       if (parentButton == games[j]){
         buyButtons[i].style.background = "rgb(37, 63, 210)";
         buyButtons[i].href = "download.html";
         buyButtons[i].textContent = "Скачать";
-
+        continue outer;
+        debugger;
       }
       else{
         buyButtons[i].style.background = "rgb(37, 210, 37)";
         buyButtons[i].href = "link.html";
+        debugger;
       }
-      debugger;
+      
     }
   }
 };
