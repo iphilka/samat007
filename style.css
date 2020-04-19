@@ -55,11 +55,6 @@ header{
     padding: 30px 0;
 }
 
-.lkButton:hover{
-    background-color: rgb(37, 210, 37);
-}
-
-
 .gameSection{
     display: flex;
     flex-flow: row wrap;

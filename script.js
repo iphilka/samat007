@@ -7,7 +7,7 @@ let buyButtons = document.querySelectorAll(".button");
 let user;
 
 let testFunction = function(){
-  vkLogin.style.cssText = "font-size: 25px";
+  vkLogin.style.cssText = "font-size: 18px";
   vkLogin.style.cssText = "color: rgb(37, 210, 37)"
   vkLogin.textContent = "Привет, " + user.first_name + " " + user.last_name;
   for (let i = 0; i < buyButtons.length; i++) {
