@@ -1,8 +1,12 @@
 "use strict";
 
+//Моки эмулирующие работу сервера
+
+
 let vkLogin = document.querySelector("#vkLogin");
 let buyButtons = document.querySelectorAll(".button");
 // console.log(vkLogin);
+
 
 let user;
 
@@ -12,7 +16,7 @@ let testFunction = function(){
   vkLogin.textContent = "Привет, " + user.first_name + " " + user.last_name;
   for (let i = 0; i < buyButtons.length; i++) {
     buyButtons[i].style.background = "rgb(37, 210, 37)";
-    buyButtons[i].href = "link.html";
+    buyButtons[i].href = "#";
   }
 };
 vkLogin.addEventListener('click', function (evt) {
