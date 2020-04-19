@@ -33,6 +33,7 @@ let AutorizationFunction = function(){
   vkLogin.style.cssText = "font-size: 10px";
   vkLogin.style.cssText = "color: rgb(37, 210, 37)";
   vkLogin.textContent = "Привет, " + user.first_name + " " + user.last_name;
+  pageUpgrade();
 };
 
 let pageUpgrade = function () {
