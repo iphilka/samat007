@@ -10,11 +10,29 @@ let buyButtons = document.querySelectorAll(".button");
 
 let user;
 
+
+let DonwloadButtonHendler = function(button){
+  button.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    alert("Скачивание Началось");
+  });
+};
+
+let BuyButtonHendler = function(button){
+    button.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    if(confirm("Хотите купить игру?") == true){
+      button.style.background = "rgb(37, 63, 210)";
+      button.href = "download.html";
+      button.textContent = "Скачать";
+  }
+  });
+};
+
 let AutorizationFunction = function(){
-  vkLogin.style.cssText = "font-size: 13px";
+  vkLogin.style.cssText = "font-size: 10px";
   vkLogin.style.cssText = "color: rgb(37, 210, 37)";
   vkLogin.textContent = "Привет, " + user.first_name + " " + user.last_name;
-  
 };
 
 let pageUpgrade = function () {
@@ -29,11 +47,16 @@ let pageUpgrade = function () {
         buyButtons[i].style.background = "rgb(37, 63, 210)";
         buyButtons[i].href = "download.html";
         buyButtons[i].textContent = "Скачать";
+        //вызываем функцию которая вешает обработчик на кнопку Скачать
+        DonwloadButtonHendler(buyButtons[i]);
         continue outer;
       }
       else{
         buyButtons[i].style.background = "rgb(37, 210, 37)";
         buyButtons[i].href = "link.html";
+        //вызываем функцию которая вешает обработчик на кнопку купить
+        BuyButtonHendler(buyButtons[i]);
+        continue outer;
       }
       
     }
