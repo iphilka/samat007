@@ -1,7 +1,7 @@
 "use strict";
 
 //Моки эмулирующие работу сервера
-
+let games = ["Minecraft", "Ведьмак 3"];
 
 let vkLogin = document.querySelector("#vkLogin");
 let buyButtons = document.querySelectorAll(".button");
@@ -10,15 +10,26 @@ let buyButtons = document.querySelectorAll(".button");
 
 let user;
 
-let testFunction = function(){
-  vkLogin.style.cssText = "font-size: 18px";
+let AutorizationFunction = function(){
+  vkLogin.style.cssText = "font-size: 13px";
   vkLogin.style.cssText = "color: rgb(37, 210, 37)"
   vkLogin.textContent = "Привет, " + user.first_name + " " + user.last_name;
+  
+};
+
+let pageUpgrade = function () {
   for (let i = 0; i < buyButtons.length; i++) {
+    
+    //Проверить куплена ли игра 
+    let parentButton = buyButtons.parentNode;
+    console.log(parentButton);
+
+
     buyButtons[i].style.background = "rgb(37, 210, 37)";
     buyButtons[i].href = "#";
   }
 };
+
 vkLogin.addEventListener('click', function (evt) {
     evt.preventDefault();
     // Авторизация
@@ -58,7 +69,7 @@ vkLogin.addEventListener('click', function (evt) {
     );
     //   console.log(user.first_name);
     //   console.log(user.last_name);
-    setTimeout(testFunction, 2000);
+    setTimeout(AutorizationFunction, 2000);
   });
 
  
