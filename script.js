@@ -12,7 +12,7 @@ let user;
 
 let AutorizationFunction = function(){
   vkLogin.style.cssText = "font-size: 13px";
-  vkLogin.style.cssText = "color: rgb(37, 210, 37)"
+  vkLogin.style.cssText = "color: rgb(37, 210, 37)";
   vkLogin.textContent = "Привет, " + user.first_name + " " + user.last_name;
   
 };
