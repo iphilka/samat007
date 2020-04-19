@@ -10,23 +10,28 @@ let buyButtons = document.querySelectorAll(".button");
 
 let user;
 
-
-let DonwloadButtonHendler = function(button){
-  button.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    alert("Скачивание Началось");
-  });
+let BuyButtonListener = function (evt) {
+  evt.preventDefault();
+  if(confirm("Хотите купить игру?") == true){
+  this.style.background = "rgb(37, 63, 210)";
+  this.href = "download.html";
+  this.textContent = "Скачать";
+  }
+  this.removeEventListener("click", BuyButtonListener);
+  this.addEventListener('click', DonwloadButtonListemer);
 };
 
-let BuyButtonHendler = function(button){
-    button.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    if(confirm("Хотите купить игру?") == true){
-      button.style.background = "rgb(37, 63, 210)";
-      button.href = "download.html";
-      button.textContent = "Скачать";
-  }
-  });
+let DonwloadButtonListemer = function (evt) {
+  evt.preventDefault();
+  alert("Скачивание Началось");
+};
+
+let DonwloadButtonHandler = function(button){
+  button.addEventListener("click", DonwloadButtonListemer);
+};
+
+let BuyButtonHandler = function(button){
+    button.addEventListener("click", BuyButtonListener);
 };
 
 let AutorizationFunction = function(){
@@ -49,14 +54,14 @@ let pageUpgrade = function () {
         buyButtons[i].href = "download.html";
         buyButtons[i].textContent = "Скачать";
         //вызываем функцию которая вешает обработчик на кнопку Скачать
-        DonwloadButtonHendler(buyButtons[i]);
+        DonwloadButtonHandler(buyButtons[i]);
         continue outer;
       }
       else{
         buyButtons[i].style.background = "rgb(37, 210, 37)";
         buyButtons[i].href = "link.html";
         //вызываем функцию которая вешает обработчик на кнопку купить
-        BuyButtonHendler(buyButtons[i]);
+        BuyButtonHandler(buyButtons[i]);
         continue outer;
       }
       
