@@ -6,7 +6,8 @@ console.log(vkLogin);
 let user;
 
 let testFunction = function(){
-  vkLogin.style.cssText = "font-size: 15px";
+  vkLogin.style.cssText = "font-size: 25px";
+  vkLogin.style.cssText = "color: rgb(37, 210, 37)"
   vkLogin.textContent = "Привет, " + user.first_name + " " + user.last_name;
 };
 vkLogin.addEventListener('click', function (evt) {
