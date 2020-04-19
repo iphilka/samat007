@@ -25,7 +25,7 @@ let pageUpgrade = function () {
 
     for (let j = 0; j < games.length; j++) {
       debugger;
-      if (parentButton == buyButtons[i]){
+      if (parentButton == games[j]){
         buyButtons[i].style.background = "rgb(37, 63, 210)";
         buyButtons[i].href = "download.html";
         buyButtons[i].textContent = "Скачать";
