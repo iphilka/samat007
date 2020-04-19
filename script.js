@@ -1,7 +1,8 @@
 "use strict";
 
 let vkLogin = document.querySelector("#vkLogin");
-console.log(vkLogin);
+let buyButtons = document.querySelectorAll(".button");
+// console.log(vkLogin);
 
 let user;
 
@@ -9,6 +10,10 @@ let testFunction = function(){
   vkLogin.style.cssText = "font-size: 25px";
   vkLogin.style.cssText = "color: rgb(37, 210, 37)"
   vkLogin.textContent = "Привет, " + user.first_name + " " + user.last_name;
+  for (let i = 0; i < buyButtons.length; i++) {
+    buyButtons[i].style.background = "rgb(37, 210, 37)";
+    buyButtons[i].href = "link.html";
+  }
 };
 vkLogin.addEventListener('click', function (evt) {
     evt.preventDefault();

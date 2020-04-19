@@ -74,13 +74,16 @@ header{
 .button{
     display: block;
     padding: 15px 0;
+    margin: 15px auto;
     font-size: 30px;
-    background-color: rgb(37, 210, 37);
+    background-color: rgb(142, 142, 142);
     text-decoration: none;
     color: black;
     width: 70%;
     text-align: center;
 }
+
+
 
 .gameItem{
     margin-right: 20px;    
