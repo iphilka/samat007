@@ -16,9 +16,9 @@ let BuyButtonListener = function (evt) {
   this.style.background = "rgb(37, 63, 210)";
   this.href = "download.html";
   this.textContent = "Скачать";
-  }
   this.removeEventListener("click", BuyButtonListener);
   this.addEventListener('click', DonwloadButtonListemer);
+  }
 };
 
 let DonwloadButtonListemer = function (evt) {
